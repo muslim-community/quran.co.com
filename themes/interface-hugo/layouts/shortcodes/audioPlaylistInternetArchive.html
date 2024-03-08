@@ -1,0 +1,18 @@
+<div id="audioPlaylistInternetArchive"  class="audioPlaylistInternetArchive">
+  
+  <p>
+    <div class="d-grid d-md-block">
+      {{ $ia_mp3_download_url := replace site.Params.ia_mp3_download_url "IA_IDENTIFIER" (.Get 0) }}
+      <a href="{{ $ia_mp3_download_url }}" title='{{ i18n "download_full_quran" }}' class="btn btn-primary btn-sm">
+        {{ i18n "download_full_quran" }}&nbsp;&nbsp;&nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+      </a>
+    
+      {{ $ia_download_url := replace site.Params.ia_download_url "IA_IDENTIFIER" (.Get 0) }}
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="{{ $ia_download_url }}" target="_blank" title='{{ i18n "download_single_files" }}' class="btn btn-primary btn-sm">
+        {{ i18n "download_single_files" }}&nbsp;&nbsp;&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
+      </a>
+    </div>
+  </p>
+  <iframe src="https://archive.org/embed/{{ .Get 0 }}&playlist=1" width="100%" height="600" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+</div>

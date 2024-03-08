@@ -1,0 +1,73 @@
+- id: home
+  translation: Home
+
+- id: send
+  translation: send message
+
+- id: email
+  translation: Email
+
+- id: phone
+  translation: Phone
+
+- id: follow_us
+  translation: Follow us
+
+- id: first_name
+  translation: First Name
+
+- id: last_name
+  translation: Last Name
+
+- id: message
+  translation: Message
+
+- id: email_address
+  translation: Email Address
+
+- id: min_read
+  translation: min read
+
+- id: recent_posts
+  translation: Recent Posts of
+
+- id: related_posts
+  translation: Related Posts
+
+- id: all_posts
+  translation: All Posts
+
+- id: 404_not_found
+  translation: 404 Page Not Found!
+
+- id: back_to_home
+  translation: Go Back home
+
+- id: search_input_placeholder
+  translation: Search Here
+
+- id: no_results_for
+  translation: No results for
+
+- id: empty_search_results_placeholder
+  translation: Type something to search...
+
+#quran recitation partial
+- id: recitation
+  translation: Recitation
+- id: recitation_arabic
+  translation: Recitation in arabic
+- id: method
+  translation: Method
+- id: method_arabic
+  translation: Method in arabic
+- id: recitor
+  translation: Reciter
+- id: recitor_arabic
+  translation: Reciter in arabic
+- id: download_full_quran
+  translation: Download the full Quran
+- id: listen
+  translation: Listen
+- id: download_single_files
+  translation: Download single files

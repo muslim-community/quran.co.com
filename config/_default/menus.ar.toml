@@ -1,0 +1,42 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "الصفحة الرئيسية"
+url = ""      # don't use a slash for home url
+weight = 10
+
+[[main]]
+name = "التلاوات"
+url = "audio-recitation/"
+weight = 20
+
+# [[main]]
+# name = "الترجمات"
+# url = "audio-translation/"
+# weight = 30
+
+[[main]]
+name = "اتصل بنا"
+url = "contact/"
+weight = 40
+
+[[footer]]
+name = "تعرف علينا"
+url = "/ar/about/"
+weight = 10
+
+[[footer]]
+name = "البيانات الشخصية"
+url = "/ar/privacy-policy/"
+weight = 20
+
+[[footer]]
+name = "سجل التغييرات"
+url = "/ar/changelog/"
+weight = 30
+
+[[footer]]
+name = "اتصل بنا"
+url = "/ar/contact/"
+weight = 40

@@ -1,0 +1,81 @@
+-
+    id: home
+    translation: الصفحة الرئيسية
+-
+    id: send
+    translation: أرسلها
+-
+    id: email
+    translation: البريد الإلكتروني
+-
+    id: phone
+    translation: الهاتف
+-
+    id: follow_us
+    translation: تابعنا
+-
+    id: first_name
+    translation: الاسم
+-
+    id: last_name
+    translation: اللقب
+-
+    id: message
+    translation: الرسالة
+-
+    id: email_address
+    translation: البريد الإلكتروني
+-
+    id: min_read
+    translation: الحد الأدنى للقراءة
+-
+    id: recent_posts
+    translation: أحدث المقالات من
+-
+    id: related_posts
+    translation: مقالات مماثلة
+-
+    id: all_posts
+    translation: جميع المقالات
+-
+    id: 404_not_found
+    translation: 404 لم يتم العثور على الصفحة!
+-
+    id: back_to_home
+    translation: العودة الى الصفحة الرئيسية
+-
+    id: search_input_placeholder
+    translation: ابحث
+-
+    id: no_results_for
+    translation: لا توجد نتائج ل
+-
+    id: empty_search_results_placeholder
+    translation: اكتب شيئًا للبحث ...
+-
+    id: recitation
+    translation: التلاوة باللغة الإنجليزية
+-
+    id: recitation_arabic
+    translation: التلاوة
+-
+    id: method
+    translation: الطريقة باللغة الإنجليزية
+-
+    id: method_arabic
+    translation: الطريقة
+-
+    id: recitor
+    translation: القارئ باللغة الإنجليزية
+-
+    id: recitor_arabic
+    translation: القارئ
+-
+    id: download_full_quran
+    translation: تنزيل القرآن كامل
+-
+    id: listen
+    translation: استماع
+-
+    id: download_single_files
+    translation: تنزيل ملفات فردية

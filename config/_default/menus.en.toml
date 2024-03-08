@@ -1,0 +1,42 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+url = ""      # don't use a slash for home url
+weight = 10
+
+[[main]]
+name = "Recitations"
+url = "audio-recitation/"
+weight = 20
+
+# [[main]]
+# name = "Translations"
+# url = "audio-translation/"
+# weight = 30
+
+[[main]]
+name = "Contact us"
+url = "contact/"
+weight = 40
+
+[[footer]]
+name = "About us"
+url = "/about/"
+weight = 10
+
+[[footer]]
+name = "Privacy policy"
+url = "/privacy-policy/"
+weight = 20
+
+[[footer]]
+name = "Changelog"
+url = "/changelog/"
+weight = 30
+
+[[footer]]
+name = "Contact us"
+url = "/contact/"
+weight = 40

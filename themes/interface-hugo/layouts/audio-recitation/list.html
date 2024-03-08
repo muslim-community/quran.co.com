@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{ partial "components/page-header" . }}
+  
+  <!-- start quran recitation list -->
+  {{ partial "components/quran_audio_ia_list" (dict "Context" .) }}
+  <!-- end quran recitation list -->
+
+{{ end }}

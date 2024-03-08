@@ -1,0 +1,33 @@
+################ English language ##################
+[en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/en"
+weight = 1
+title = "Free download recitations and translations of the full Quran in mp3 format as well as Quran books  and videos. This is a non-profit website that values and respects the privacy of all of our users."
+[en.params]
+description = "Free download recitations and translations of the full Quran in mp3 format as well as Quran books  and videos. This is a non-profit website that values and respects the privacy of all of our users."
+copyright = "Copyright © 2024 Quran.co.com. All Rights Reserved."
+
+################ French language ##################
+[fr]
+languageName = "Fr"
+languageCode = "fr-fr"
+contentDir = "content/fr"
+weight = 3
+title = "Téléchargez gratuitement des récitations et des traductions du Coran complet au format mp3 ainsi que des livres et des vidéos du Coran. Notre site Web est à but non lucratif, il valorise et respecte la vie privée de tous les utilisateurs."
+[fr.params]
+description = "Téléchargez gratuitement des récitations et des traductions du Coran complet au format mp3 ainsi que des livres et des vidéos du Coran. Notre site Web est à but non lucratif, il valorise et respecte la vie privée de tous les utilisateurs."
+copyright = "Copyright © 2024 Quran.co.com. Tous droits réservés."
+
+################ Arabic language ##################
+[ar]
+languageName = "ar"
+languageCode = "ar-ar"
+languageDirection = 'rtl'
+contentDir = "content/ar"
+weight = 2
+title = "تحميل مجاني لتلاوات و ترجمات صوتية للقرآن الكريم كاملا بالإضافة إلى كتب ومقاطع الفيديو. هذا موقع غير ربحي. نحترم ولا نستخدم و لا نتاجر ببياناتكم الشخصية."
+[ar.params]
+description = "تحميل مجاني لتلاوات و ترجمات صوتية للقرآن الكريم كاملا بالإضافة إلى كتب ومقاطع الفيديو. هذا موقع غير ربحي. نحترم ولا نستخدم و لا نتاجر ببياناتكم الشخصية."
+copyright = "Copyright © 2024 Quran.co.com. كل الحقوق محفوظة."

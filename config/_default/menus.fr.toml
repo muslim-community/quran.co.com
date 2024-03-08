@@ -1,0 +1,42 @@
+############# French navigation ##############
+
+# main menu
+[[main]]
+name = "Accueil"
+url = ""      # don't use a slash for home url
+weight = 10
+
+[[main]]
+name = "Récitations"
+url = "audio-recitation/"
+weight = 20
+
+# [[main]]
+# name = "Traductions"
+# url = "audio-translation/"
+# weight = 30
+
+[[main]]
+name = "Nous contacter"
+url = "contact/"
+weight = 40
+
+[[footer]]
+name = "Qui sommes-nous"
+url = "/fr/about/"
+weight = 10
+
+[[footer]]
+name = "Données personnelles"
+url = "/fr/privacy-policy/"
+weight = 20
+
+[[footer]]
+name = "Journal des modifications"
+url = "/fr/changelog/"
+weight = 30
+
+[[footer]]
+name = "Nous contacter"
+url = "/fr/contact/"
+weight = 40

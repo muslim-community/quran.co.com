@@ -1,0 +1,55 @@
+<meta charset="utf-8" />
+<title>{{ .Title | default site.Title }}</title>
+{{/*  <meta name="description" content="{{ .Params.description | default site.Params.description }}" />  */}}
+
+<!-- responsive meta -->
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+<!-- favicon -->
+{{ partialCached "favicon" . }}
+
+
+<!-- manifest -->
+{{ partialCached "manifest" . }}
+
+
+<!-- site verifications -->
+{{ partialCached "site-verifications.html" . }}
+
+
+<!-- opengraph and twitter card -->
+{{ partial "essentials/basic-seo.html" . }}
+
+
+<!-- custom script -->
+{{ partialCached "custom-script.html" . }}
+
+
+<!-- google analytics -->
+{{/* {{ template "_internal/google_analytics.html" . }} */}}
+
+<!-- google tag manager -->
+{{/*  {{ partialCached "gtm.html" . }}  */}}
+
+<!-- google analytics -->
+{{ partialCached "essentials/google-analytics.html" . }}
+
+<!--Search -->
+{{ partial "search-index.html" . }}
+
+<!-- matomo analytics -->
+{{/* {{ partialCached "matomo-analytics.html" . }} */}}
+
+<!--  Baidu analytics -->
+{{/* {{ partialCached "baidu-analytics.html" . }} */}}
+
+<!-- Plausible Analytics -->
+{{/* {{ partialCached "plausible-analytics.html" . }} */}}
+
+<!-- Counter Analytics -->
+{{/* {{ partialCached "counter-analytics.html" . }} */}}
+
+<!-- Crisp Chat -->
+{{/* {{ partialCached "crisp-chat.html" . }} */}}

@@ -1,0 +1,81 @@
+-
+    id: home
+    translation: Accueil
+-
+    id: send
+    translation: Envoyez
+-
+    id: email
+    translation: E-mail
+-
+    id: phone
+    translation: Téléphone
+-
+    id: follow_us
+    translation: Suivez-nous
+-
+    id: first_name
+    translation: Prénom
+-
+    id: last_name
+    translation: Nom
+-
+    id: message
+    translation: Message
+-
+    id: email_address
+    translation: E-mail
+-
+    id: min_read
+    translation: lecture minimale
+-
+    id: recent_posts
+    translation: les articles récents de
+-
+    id: related_posts
+    translation: Articles Similaires
+-
+    id: all_posts
+    translation: Tous les articles
+-
+    id: 404_not_found
+    translation: 404 Page non trouvée!
+-
+    id: back_to_home
+    translation: 'Retournez à l''accueil'
+-
+    id: search_input_placeholder
+    translation: Cherchez
+-
+    id: no_results_for
+    translation: Aucun résultat pour
+-
+    id: empty_search_results_placeholder
+    translation: Saisissez votre terme de recherche...
+-
+    id: recitation
+    translation: Récitation
+-
+    id: recitation_arabic
+    translation: Récitation en arabe
+-
+    id: method
+    translation: Méthode
+-
+    id: method_arabic
+    translation: Méthode en arabe
+-
+    id: recitor
+    translation: Récitateur
+-
+    id: recitor_arabic
+    translation: Récitateur en arabe
+-
+    id: download_full_quran
+    translation: Téléchargez le Coran complet
+-
+    id: listen
+    translation: Écoutez
+-
+    id: download_single_files
+    translation: Téléchargez des fichiers uniques
