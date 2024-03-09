@@ -16,8 +16,7 @@ mainSections = ["blog"]
 # image gallery shortcode
 image_gallery = false
 # contact form action
-contact_form_name = ""    # contact form works with [https://airform.io/] or [https://formspree.io]
-contact_form_action = "https://airform.io/muslim.community@proton.me" # contact form works with [https://airform.io/] or [https://formspree.io]
+contact_form_action = "https://submit-form.com/" # contact form works with [https://airform.io/] or [https://formspree.io]
 # google tag manager, see https://developers.google.com/tag-manager/
 google_analytics = "TRUE" # example: G-XXXXXXXXXX
 #google_tag_manager = "G-XXXXXXXXXX" # example: G-XXXXXXXXXX

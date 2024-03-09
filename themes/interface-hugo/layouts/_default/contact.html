@@ -11,7 +11,7 @@
     <div class="row gy-sm-4 justify-content-center">
       <div class="col-lg-7">
         <form method="post" class="block bg-white rounded-5 h-100" name="{{ site.Params.contact_form_name }}"
-          action="{{ site.Params.contact_form_action }}">
+          action='{{ site.Params.contact_form_action }}{{ getenv "HUGO_CONTACT_FORM_KEY" }}'>
           <div class="row gy-3">
             <div class="col-lg-6">
               <div class="form-group required">
