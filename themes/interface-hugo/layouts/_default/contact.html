@@ -14,6 +14,9 @@
           action='{{ site.Params.contact_form_action }}{{ getenv "HUGO_CONTACT_FORM_KEY" }}'>
           <div class="row gy-3">
             <div class="col-lg-6">
+              <div class="cf-turnstile" data-sitekey='{{ getenv "HUGO_TURNSTILE_KEY" }}' data-callback="javascriptCallback"></div>
+              <input type="hidden" name="_redirect" value='{{ getenv "HUGO_CONTACT_REDIRECT" }}'
+              />
               <div class="form-group required">
                 <label class="small control-label text-dark mb-1" for="fname">
                   {{ i18n `first_name` }}
