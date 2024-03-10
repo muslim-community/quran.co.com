@@ -61,9 +61,9 @@
   translation: Method
 - id: method_arabic
   translation: Method in arabic
-- id: recitor
+- id: reciter
   translation: Reciter
-- id: recitor_arabic
+- id: reciter_arabic
   translation: Reciter in arabic
 - id: download_full_quran
   translation: Download the full Quran

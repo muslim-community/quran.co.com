@@ -3,12 +3,48 @@ import csv
 from pathlib import Path
 from internetarchive import modify_metadata
 
-id_list = ['yasser_alqorashi_mp3_quran', 'Abdulbaset_abdulsamad_with_naeem_sultan_pickthallTranslation_mp3_quran', 'Abdullah_Basfar_with_Ibrahim_Walk_Saheeh_Intl_English_Translation', 'Al-tablawi_MP3_Quran', 'Mishari_al-Afasy_with_Saabir_Muhsin_Khan_English_Translation', 'Muhammad_ayyub_with_mikaal_waters_muhsinKhan_english_translation', 'OifyHfPiyfOug', 'Saud_al-shuraim_with_abdulrahman_alsudaesurduTranslation_mp3_quran', 'Shakir_Qasami_with_Aslam_Athar_Pickthall_Translation', 'SudaisAndShuraymWithAslamAtharpickthallTranslation', 'Sudais_and_Shuraym_with_Naeem_Sultan_Pickthall_English_Translation', 'la_traduction_des_sens_du_coran_en_francais']
+input_file_name = "E:/development/gitp/quran.co.com/assets/data/quran.v1.0.csv"  # name/path of csv file
 
-with open( 'E:/development/gitp/qurand.com/data-ext/archive-audio.csv', encoding="utf8") as dataFile:
-    reader = csv.DictReader(dataFile,delimiter=";")
+id_list = [
+    "Mishary_Alafasy_Quran"
+]
+
+with open(input_file_name, encoding="utf8") as dataFile:
+    reader = csv.DictReader(dataFile, delimiter=",")
     for line in reader:
-        if line['identifier'] in id_list:
-            r = modify_metadata(line['identifier'], metadata=dict(description=line['description']))
-            print('Status code for : ' + line['identifier'] + ' : ' + str(r.status_code))
-        
+        if line["identifier"] in id_list:
+            r = modify_metadata(
+                line["identifier"],
+                metadata=dict(
+                    title=line["title"],
+                    description=line["description"],
+                    subject=line["keywords"],
+                    creator=line["ar_reciter"],
+                    reciter_english=line["en_reciter"],
+                    source=line["source"],
+                    uploaded_by=line["uploaded_by"],
+                    recitation=line["en_recitation"],
+                    method=line["en_method"],
+                    arabic_recitation=line["ar_recitation"],
+                    arabic_method=line["ar_method"],
+                    translation_language_english=line["translation_language_english"],
+                    translation_language=line["translation_language"],
+                    translation_version=line["translation_version"],
+                    translation_reciter=line["translation_reciter"],
+                    meaning_translation=line["meaning_translation"],
+                    Title_amharic=line["am_title"],
+                    Title_arabic=line["ar_title"],
+                    Title_bengali=line["bn_title"],
+                    Title_chinese=line["zh_title"],
+                    Title_english=line["en_title"],
+                    Title_french=line["fr_title"],
+                    Title_indonesian=line["id_title"],
+                    Title_pashto=line["ps_title"],
+                    Title_persian=line["fa_title"],
+                    Title_russian=line["ru_title"],
+                    Title_turkish=line["tr_title"],
+                    Title_urdu=line["ur_title"],
+                    Title_uyghur=line["ug_title"],
+                ),
+            )
+            print("Status code for : " + line["identifier"] + " : " + str(r.status_code) + " : " + str(r.reason))

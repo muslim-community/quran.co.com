@@ -65,10 +65,10 @@
     id: method_arabic
     translation: Méthode en arabe
 -
-    id: recitor
+    id: reciter
     translation: Récitateur
 -
-    id: recitor_arabic
+    id: reciter_arabic
     translation: Récitateur en arabe
 -
     id: download_full_quran
