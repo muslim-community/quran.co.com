@@ -1,0 +1,51 @@
+{{ define "main" }}
+  {{ partial "components/page-header" . }}
+
+
+  <!-- about us -->
+  {{ with .Params.about_us }}
+    <section class="section has-backdrop pt-0">
+      {{ if (strings.Contains site.Language.Lang "ar") }}
+        <div class="container rtlDirection">
+      {{ else }}
+        <div class="container">
+      {{ end }}
+        <div class="row justify-content-center mb-3">
+          <div class="col-lg-10 text-center">
+            <p class="section-subtitle text-secondary">
+              {{ .subtitle | markdownify }}
+            </p>
+            <h2 class="section-title text-center">
+              {{ .title | markdownify }}
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          {{ range $i, $e := .images }}
+            <div class="col-lg-3 col-6">
+              <div class="{{ if not (modBool $i 2) }}pt-4 mt-2{{ end }}">
+                {{ partial "image" (dict "Src" . "Alt" "about image" "Class" "shadow-lg rounded-4 w-100") }}
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <svg
+        class="backdrop text-tertiary"
+        style="top:0;right:0"
+        width="490"
+        height="670"
+        viewBox="0 0 490 670"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          opacity="0.25"
+          d="M427.667 1.51615e-05C612.866 7.06621e-06 763 149.985 763 335C763 520.015 612.866 670 427.667 670C343.258 670 246.953 638.844 167.13 587.416C71.8151 526.006 -1.0242e-05 435.691 -1.46433e-05 335C-1.89705e-05 236.006 167.749 261.462 260.667 200.134C341.407 146.844 341.56 1.89254e-05 427.667 1.51615e-05Z"
+          fill="currentColor"></path>
+      </svg>
+    </section>
+  {{ end }}
+  <!-- end about_us -->
+  
+{{ end }}

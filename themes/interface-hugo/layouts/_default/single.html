@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <!-- regular page -->
+  {{ partial "components/page-header.html" . }}
+  <section class="section-sm pt-0">
+    {{ if (strings.Contains site.Language.Lang "ar") }}
+        <div class="container-xxl rtlDirection">
+      {{ else }}
+        <div class="container-xxl">
+      {{ end }}
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="content">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /regular page -->
+{{ end }}

@@ -1,0 +1,154 @@
+{{ $context:= .Context }}
+{{ with $context.Params.quranRecitation }}
+  <section class="quran section has-backdrop pt-0">
+    <div class="container">
+      <div class="row justify-content-center mb-3">
+        <div class="col-lg-10 text-center">
+          <p class="section-subtitle text-primary">
+            {{ .subtitle | markdownify }} 👇
+          </p>
+          <h2 class="section-title text-center">
+            {{ .title | markdownify }}
+          </h2>
+          <!-- social share -->
+          {{ partial "essentials/social-share.html" (dict "Context" $context "Tumblr" false "Vk" false) }}
+          <!-- end social share -->
+        </div>
+      </div>
+      <div class="row gy-3 gx-3 bg-white rounded-5 pb-3 px-2 shadow-lg m-auto">
+        <script
+          src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+
+        <link
+          href="https://cdn.datatables.net/v/dt/dt-2.0.0/b-3.0.0/b-colvis-3.0.0/fc-5.0.0/fh-4.0.0/r-3.0.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/datatables.min.css"
+          rel="stylesheet" />
+
+        <script src="https://cdn.datatables.net/v/dt/dt-2.0.0/b-3.0.0/b-colvis-3.0.0/fc-5.0.0/fh-4.0.0/r-3.0.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/datatables.min.js"></script>
+        <div id="quranTableContainer" class="dt-container quranTableContainer">
+          <table id="quranTable" class="display dataTable">
+            <thead>
+              <tr>
+                {{ if (strings.Contains site.Language.Lang "ar") }}
+                  <th>{{ i18n "reciter_arabic" }}</th>
+                  <th>{{ i18n "recitation_arabic" }}</th>
+                  <th>{{ i18n "method_arabic" }}</th>
+                  <th>{{ i18n "reciter" }}</th>
+                  <th>{{ i18n "recitation" }}</th>
+                  <th>{{ i18n "method" }}</th>
+                {{ else }}
+                  <th>{{ i18n "reciter" }}</th>
+                  <th>{{ i18n "recitation" }}</th>
+                  <th>{{ i18n "method" }}</th>
+                  <th>{{ i18n "reciter_arabic" }}</th>
+                  <th>{{ i18n "recitation_arabic" }}</th>
+                  <th>{{ i18n "method_arabic" }}</th>
+                {{ end }}
+                <th>{{ i18n "download_full_quran" }}</th>
+                <th>{{ i18n "download_single_files" }}</th>
+                <th>{{ i18n "listen" }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range site.Data.quran }}
+                {{ if (strings.Contains .meaning_translation "FALSE") }}
+                  <tr>
+                    {{ if (strings.Contains site.Language.Lang "ar") }}
+                      <td>{{ .ar_reciter }}</td>
+                      <td>{{ .ar_recitation }}</td>
+                      <td>{{ .ar_method }}</td>
+                      <td>{{ .en_reciter }}</td>
+                      <td>{{ .en_recitation }}</td>
+                      <td>{{ .en_method }}</td>
+                    {{ else }}
+                      <td>{{ .en_reciter }}</td>
+                      <td>{{ .en_recitation }}</td>
+                      <td>{{ .en_method }}</td>
+                      <td>{{ .ar_reciter }}</td>
+                      <td>{{ .ar_recitation }}</td>
+                      <td>{{ .ar_method }}</td>
+                    {{ end }}
+                    <td>
+                      {{ $ia_mp3_download_url := replace site.Params.ia_mp3_download_url "IA_IDENTIFIER" .identifier }}
+
+                      <a
+                        href="{{ $ia_mp3_download_url }}"
+                        title="{{ i18n "download_full_quran" }}">
+                        <i class="fa fa-download" aria-hidden="true"> </i>
+                      </a>
+                    </td>
+                    <td>
+                      {{ $ia_download_url := replace site.Params.ia_download_url "IA_IDENTIFIER" .identifier }}
+
+                      <a
+                        href="{{ $ia_download_url }}"
+                        target="_blank"
+                        title="{{ i18n "download_single_files" }}">
+                        <i class="fa fa-external-link" aria-hidden="true"> </i>
+                      </a>
+                    </td>
+                    <td>
+                      {{/* {{ $listen_url := replace "/LANG/audio-recitation/SLUG" "IA_IDENTIFIER" .en_slug }}
+                      */}}
+                      {{ $listen_url := "/audio-recitation/SLUG" }}
+                      {{ $slug := .en_slug }}
+
+                      {{ if (strings.Contains site.Language.Lang "ar") }}
+                        {{ $listen_url = "/ar/audio-recitation/SLUG" }}
+                      {{ else if (strings.Contains site.Language.Lang "fr") }}
+                        {{ $listen_url = "/fr/audio-recitation/SLUG" }}
+                      {{ else }}
+                        {{ $listen_url = "/audio-recitation/SLUG" }}
+                      {{ end }}
+
+                      {{ if (strings.Contains site.Language.Lang "ar") }}
+                        {{ $slug = .ar_slug }}
+                      {{ else if (strings.Contains site.Language.Lang "fr") }}
+                        {{ $slug = .fr_slug }}
+                      {{ else }}
+                        {{ $slug = .en_slug }}
+                      {{ end }}
+
+                      {{ $listen_url = replace $listen_url "SLUG" $slug }}
+
+                      <a
+                        href="{{ $listen_url }}"
+                        target="_blank"
+                        title="{{ i18n "listen" }}">
+                        <i class="fa fa-headphones" aria-hidden="true"> </i>
+                      </a>
+                    </td>
+                  </tr>
+                {{ end }}
+              {{ end }}
+            </tbody>
+          </table>
+
+          <script>
+            $(document).ready(function () {
+              $("#quranTable").DataTable({
+                responsive: true,
+                paging: false,
+                scrollY: 500,
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <svg
+      class="backdrop text-tertiary"
+      width="490"
+      height="670"
+      viewBox="0 0 490 670"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        opacity="0.25"
+        d="M427.667 1.51615e-05C612.866 7.06621e-06 763 149.985 763 335C763 520.015 612.866 670 427.667 670C343.258 670 246.953 638.844 167.13 587.416C71.8151 526.006 -1.0242e-05 435.691 -1.46433e-05 335C-1.89705e-05 236.006 167.749 261.462 260.667 200.134C341.407 146.844 341.56 1.89254e-05 427.667 1.51615e-05Z"
+        fill="currentColor"></path>
+    </svg>
+  </section>
+{{ end }}

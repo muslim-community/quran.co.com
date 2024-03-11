@@ -1,0 +1,54 @@
+{{ define "main" }}
+  <!-- banner -->
+  {{ with .Params.banner }}
+    <section class="banner has-backdrop has-overlay">
+      {{ if (strings.Contains site.Language.Lang "ar") }}
+        <div class="container rtlDirection">
+      {{ else }}
+        <div class="container">
+      {{ end }}
+        <div class="row">
+          <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="section text-center">
+              <h1 class="section-title gradient-title text-center">
+                {{ .title | markdownify }}
+              </h1>
+              <p>
+                {{ .subtitle | markdownify }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg
+        class="backdrop backdrop-1 text-quaternary"
+        width="552"
+        height="524"
+        viewBox="0 0 552 524"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          opacity="0.8"
+          d="M173.596 -232C382.583 -232 552 -62.7637 552 146C552 354.764 382.583 524 173.596 524C78.3462 524 -30.328 488.845 -120.404 430.815C-227.961 361.523 -309 259.615 -309 146C-309 34.2989 -119.705 63.0226 -14.8532 -6.17695C76.2577 -66.3078 76.4301 -232 173.596 -232Z"
+          fill="currentColor" />
+      </svg>
+      <svg
+        class="backdrop backdrop-2 text-tertiary"
+        width="490"
+        height="670"
+        viewBox="0 0 490 670"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          opacity="0.4"
+          d="M427.667 1.51615e-05C612.866 7.06621e-06 763 149.985 763 335C763 520.015 612.866 670 427.667 670C343.258 670 246.953 638.844 167.13 587.416C71.8151 526.006 -1.0242e-05 435.691 -1.46433e-05 335C-1.89705e-05 236.006 167.749 261.462 260.667 200.134C341.407 146.844 341.56 1.89254e-05 427.667 1.51615e-05Z"
+          fill="currentColor" />
+      </svg>
+    </section>
+  {{ end }}
+  <!-- end banner -->
+
+  <!-- start quran recitation list -->
+  {{ partial "components/quran_audio_ia_list" (dict "Context" .) }}
+  <!-- end quran recitation list -->
+{{ end }}

@@ -1,0 +1,140 @@
+#################### default parameters ################################
+# favicon
+favicon = "images/favicon.png"
+# logo
+logo = "images/logo.png"
+logo_dark = "images/logo-light.png"
+# use `px` or `x` with logo_width, example: "100px".
+# Note: logo_width is not work with .svg file
+logo_width = "200px"
+# if logo_webp set false, will not generate WEBP version of logo | default is true
+logo_webp = true
+# logo text will only show when logo is missing.
+logo_text = "Quran.co.com"
+# Main Sections
+mainSections = ["blog"]
+# image gallery shortcode
+image_gallery = false
+# contact form action
+contact_form_action = "https://submit-form.com/" # contact form works with [https://airform.io/] or [https://formspree.io]
+# google tag manager, see https://developers.google.com/tag-manager/
+google_analytics = "TRUE" # example: G-XXXXXXXXXX
+#google_tag_manager = "G-XXXXXXXXXX" # example: G-XXXXXXXXXX
+# custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
+custom_script = ""
+# copyright
+theme_copyright = false
+
+# internet archive
+ia_mp3_download_url = "https://archive.org/compress/IA_IDENTIFIER/formats=VBR%20MP3&file=/IA_IDENTIFIER.zip"
+ia_download_url = "https://archive.org/download/IA_IDENTIFIER"
+
+# Preloader
+[preloader]
+enable = false
+preloader = "" # use jpg, png, svg or gif format.
+
+# Navigation button
+[navigation_button]
+enable = false
+label = "Try For Free"
+link = "contact/"
+
+# Subscription
+[subscription]
+enable = false
+content = "Data way to your end-user browser, while remaining completely invisible to our Forest Admin servers."
+# mailchimp subsciption
+mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
+mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074"
+
+# Call to Action
+[cta]
+enable = false
+title = "Ready for internal tool that fits all your needs?"
+subtitle = "presentation Made  together"
+[[cta_button]]
+label = "Get started for free"
+link = "signup/"
+[[cta_button]]
+label = "Request a demo"
+link = "contact/"
+
+# Crisp Chat
+[crisp_chat]
+enable = false
+crisp_website_id = "9aa449e1-9999-422a-938f-8567982eec6d" # replace this code with yours
+# Check this video tutorial to get your crisp website ID - https://www.youtube.com/watch?v=nW5UX6iVdFc
+
+# seo meta data for OpenGraph / Twitter Card
+[metadata]
+keywords = ["quran","القرآن","Coran","Quran","قرآن مجید","কুরআন","Kur'an","قرآن","Quran","قرآن کریم","قۇرئان","Коран","古兰经","islam","الاسلام","Islam","Islam","اسلام","ইসলাম","İslâm","اسلام","እስልምና","اسلام","ئىسلام","ислам","伊斯兰教","audio","صوتي","audio","audio","آڈیو","শ্রুতি","ses","سمعی","ኦዲዮ","آډیو","audio","аудио","声音的","book","كتاب","livre","buku","کتاب","বই","kitap","کتاب","መጽሐፍ","کتاب","كىتاب","книга","书","video","فيديو","vidéo","video","ویڈیو","ভিডিও","video","ویدئو","ቪዲዮ","ویډیو","سىن","видео","视频","download","تحميل","télécharger","unduh","ڈاؤن لوڈ کریں","ডাউনলোড","indirmek","دانلود","አውርድ","ډاونلوډ","چۈشۈرۈش","скачать","下载","free of charge","مجاني","gratuit","gratis","بلا معاوضہ","বিনামূল্যে","ücretsiz","رایگان","ከክፍያ ነጻ","وړيا","ھەقسىز","бесплатно","免费","mp3"]
+description = "Free download recitations and translations of the full Quran in mp3 format as well as Quran books  and videos. This is a non-profit website that values and respects the privacy of all of our users."
+author = "Quran.co.com"
+image = "images/logo.png"                # this image will be used as fallback if a page has no image of its own
+
+# matomo tracking: see https://matomo.org/
+[matomo]
+enable = false
+url = ""       # your matomo url
+id = ""        # your matomo id
+
+# baidu analytics: see https://tongji.baidu.com/
+[baidu]
+enable = false
+analytics_id = "" # Your ID
+
+# plausible analytics: see https://plausible.io/
+[plausible]
+enable = false
+domain = ""    # yourdomain.com
+
+# counter analytics: see https://counter.dev/setup.html
+[counter]
+enable = false
+username = ""  # your username
+
+# site verifications
+[site_verification]
+google = ""   # Your verification code
+bing = ""     # Your verification code
+baidu = ""    # Your verification code
+facebook = "" # Your verification code
+
+# cookies
+[cookies]
+enable = true
+expire_days = 3
+content = "This website use cookies. By using this website, you automatically accept that. We do not collect, use, or sell any of your personal information. Please check our privacy policy."
+button = "Got it !"
+
+############################# social site ########################
+[[social]]
+title = "github"
+icon = "fab fa-github" # fontawesome icon pack : https://fontawesome.com/icons/
+link = "https://github.com/muslim-community/quran.co.com"
+
+# [[social]]
+# title = "facebook"
+# icon = "fab fa-facebook" # fontawesome icon pack : https://fontawesome.com/icons/
+# link = "#"
+
+# [[social]]
+# title = "twitter"
+# icon = "fab fa-twitter" # fontawesome icon pack : https://fontawesome.com/icons/
+# link = "#"
+
+# [[social]]
+# title = "instagram"
+# icon = "fab fa-instagram" # fontawesome icon pack : https://fontawesome.com/icons/
+# link = "#"
+
+[search]
+enable = true
+primary_color = "#ce8460"
+#include_sections = ["post", "shop"] # if `include_sections` empty, then sections will come from the `mainSections`
+include_all_sections = true # if `include_all_sections` is true, then comment out the `include_sections`
+show_image = true
+show_description = true
+show_tags = true
+show_categories = true
