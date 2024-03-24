@@ -3,7 +3,7 @@ title: "Récitations"
 layout: "audio-recitation"
 draft: false
 
-quranRecitation:
+quranAudio:
   #title: "**Quran Recitations**"
   subtitle: "Télécharger le Coran complet en un clic"
 

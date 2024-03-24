@@ -1,0 +1,127 @@
+{{ $context:= .Context }}
+{{ $translation:= .translation | default false }}
+{{ $mushaf:= .mushaf | default false }}
+{{ with $context.Params.quranBook }}
+  <section class="quran section has-backdrop pt-0">
+    <div class="container">
+      <div class="row justify-content-center mb-3">
+        <div class="col-lg-10 text-center">
+          <p class="section-subtitle text-primary">
+            {{ .subtitle | markdownify }} 👇
+          </p>
+          <h2 class="section-title text-center">
+            {{ .title | markdownify }}
+          </h2>
+          <!-- social share -->
+          {{ partial "essentials/social-share.html" (dict "Context" $context "Tumblr" false "Vk" false) }}
+          <!-- end social share -->
+        </div>
+      </div>
+      <div class="row gy-3 gx-3 bg-white rounded-5 pb-3 px-2 shadow-lg m-auto">
+        <script
+          src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+
+        <link
+          href="https://cdn.datatables.net/v/dt/dt-2.0.0/b-3.0.0/b-colvis-3.0.0/fc-5.0.0/fh-4.0.0/r-3.0.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/datatables.min.css"
+          rel="stylesheet" />
+
+        <script src="https://cdn.datatables.net/v/dt/dt-2.0.0/b-3.0.0/b-colvis-3.0.0/fc-5.0.0/fh-4.0.0/r-3.0.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/datatables.min.js"></script>
+        <div id="quranAudioTableContainer" class="dt-container quranAudioTableContainer">
+          <table id="quranAudioTable" class="display dataTable">
+            {{ if $translation }}
+              <thead>
+                <tr>
+                  <th>{{ i18n "title" }}</th>
+                  <th>{{ i18n "translation_language" }}</th>
+                  <th>{{ i18n "translation_language_english" }}</th>
+                  <th>{{ i18n "translator_english" }}</th>
+                  <th>{{ i18n "title_english" }}</th>
+                  {{ if (strings.Contains site.Language.Lang "ar") }}
+                    <th>العنوان بالعربيّة</th>
+                    <th>لغة الترجمة بالعربيّة</th>
+                    <th>المترجم بالعربيّة</th>
+                  {{ else }}
+                    <th>العنوان</th>
+                    <th>لغة الترجمة</th>
+                    <th>المترجم</th>
+                  {{ end }}
+                  <th>{{ i18n "download" }}</th>
+                  <th>{{ i18n "read" }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{ range site.Data.quranBook }}
+                  {{ if (and (strings.Contains .duplicate "FALSE") (strings.Contains .meaning_translation "TRUE")) }}
+                    <tr>
+                      <td>{{ .translation_language_title }}</td>
+                      <td>{{ .translation_language }}</td>
+                      <td>{{ .en_translation_language }}</td>
+                      <td>{{ .en_translator }}</td>
+                      <td>{{ .en_title }}</td>
+                      <td>{{ .ar_title }}</td>
+                      <td>{{ .ar_translation_language }}</td>
+                      <td>{{ .ar_translator }}</td>
+                      <td>
+                        {{ $ia_pdf_download_url := replace site.Params.ia_pdf_download_url "IA_IDENTIFIER" .ia_id }}
+
+                        <a
+                          href="{{ $ia_pdf_download_url }}"
+                          title="{{ i18n "download" }}">
+                          <i class="fa fa-download" aria-hidden="true"> </i>
+                        </a>
+                      </td>
+                      <td>
+                        {{ $read_url := "/translation/SLUG" }}
+                        {{ $slug := replace .slug "'" "" }}
+                          
+                        {{ if (not (strings.Contains site.Language.Lang "en")) }}
+                          {{ $read_url = replace "/LANG/translation/SLUG" "LANG" site.Language.Lang }}
+                        {{ else }}
+                          {{ $read_url = "/translation/SLUG" }}
+                        {{ end }}
+
+                        {{ $read_url = replace $read_url "SLUG" $slug }}
+
+                        <a
+                          href="{{ $read_url }}"
+                          target="_blank"
+                          title="{{ i18n "read" }}">
+                          <i class="fa fa-book" aria-hidden="true"> </i>
+                        </a>
+                      </td>
+                    </tr>
+                  {{ end }}
+                {{ end }}
+              </tbody>
+            {{ end }}
+          </table>
+
+          <script>
+            $(document).ready(function () {
+              $("#quranAudioTable").DataTable({
+                responsive: true,
+                paging: false,
+                scrollY: 500,
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <svg
+      class="backdrop text-tertiary"
+      width="490"
+      height="670"
+      viewBox="0 0 490 670"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        opacity="0.25"
+        d="M427.667 1.51615e-05C612.866 7.06621e-06 763 149.985 763 335C763 520.015 612.866 670 427.667 670C343.258 670 246.953 638.844 167.13 587.416C71.8151 526.006 -1.0242e-05 435.691 -1.46433e-05 335C-1.89705e-05 236.006 167.749 261.462 260.667 200.134C341.407 146.844 341.56 1.89254e-05 427.667 1.51615e-05Z"
+        fill="currentColor"></path>
+    </svg>
+  </section>
+{{ end }}

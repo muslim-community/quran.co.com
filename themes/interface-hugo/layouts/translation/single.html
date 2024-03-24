@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ partial "components/page-header" . }}
+  <section class="section pt-0">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="pe-0 pe-lg-4">
+            <div class="text-center">
+              <!-- social share -->
+              {{ partial "essentials/social-share.html" (dict "Context" . "Tumblr" false "Vk" false) }}
+              <!-- end social share -->
+
+              <div class="content mt-4">
+                {{ .Content }}
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

@@ -28,6 +28,7 @@ theme_copyright = false
 # internet archive
 ia_mp3_download_url = "https://archive.org/compress/IA_IDENTIFIER/formats=VBR%20MP3&file=/IA_IDENTIFIER.zip"
 ia_download_url = "https://archive.org/download/IA_IDENTIFIER"
+ia_pdf_download_url = "https://archive.org/download/IA_IDENTIFIER/IA_IDENTIFIER.pdf"
 
 # Preloader
 [preloader]

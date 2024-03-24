@@ -4,7 +4,7 @@ layout: "audio-recitation"
 #slug: "free-download-full-quran-mp3"
 draft: false
 
-quranRecitation:
+quranAudio:
   #title: "**Quran Recitations**"
   subtitle: "One click to download the full Quran"
 

@@ -11,10 +11,10 @@ name = "التلاوات"
 url = "audio-recitation/"
 weight = 20
 
-# [[main]]
-# name = "الترجمات"
-# url = "audio-translation/"
-# weight = 30
+[[main]]
+name = "الترجمات"
+url = "translation/"
+weight = 30
 
 [[main]]
 name = "اتصل بنا"

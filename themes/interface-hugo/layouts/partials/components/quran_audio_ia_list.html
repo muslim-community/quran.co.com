@@ -1,5 +1,5 @@
 {{ $context:= .Context }}
-{{ with $context.Params.quranRecitation }}
+{{ with $context.Params.quranAudio }}
   <section class="quran section has-backdrop pt-0">
     <div class="container">
       <div class="row justify-content-center mb-3">
@@ -26,8 +26,8 @@
           rel="stylesheet" />
 
         <script src="https://cdn.datatables.net/v/dt/dt-2.0.0/b-3.0.0/b-colvis-3.0.0/fc-5.0.0/fh-4.0.0/r-3.0.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/datatables.min.js"></script>
-        <div id="quranTableContainer" class="dt-container quranTableContainer">
-          <table id="quranTable" class="display dataTable">
+        <div id="quranAudioTableContainer" class="dt-container quranAudioTableContainer">
+          <table id="quranAudioTable" class="display dataTable">
             <thead>
               <tr>
                 {{ if (strings.Contains site.Language.Lang "ar") }}
@@ -51,7 +51,7 @@
               </tr>
             </thead>
             <tbody>
-              {{ range site.Data.quran }}
+              {{ range site.Data.quranAudio }}
                 {{ if (strings.Contains .meaning_translation "FALSE") }}
                   <tr>
                     {{ if (strings.Contains site.Language.Lang "ar") }}
@@ -89,8 +89,6 @@
                       </a>
                     </td>
                     <td>
-                      {{/* {{ $listen_url := replace "/LANG/audio-recitation/SLUG" "IA_IDENTIFIER" .en_slug }}
-                      */}}
                       {{ $listen_url := "/audio-recitation/SLUG" }}
                       {{ $slug := .en_slug }}
 
@@ -127,7 +125,7 @@
 
           <script>
             $(document).ready(function () {
-              $("#quranTable").DataTable({
+              $("#quranAudioTable").DataTable({
                 responsive: true,
                 paging: false,
                 scrollY: 500,

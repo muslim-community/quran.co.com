@@ -11,10 +11,10 @@ name = "Recitations"
 url = "audio-recitation/"
 weight = 20
 
-# [[main]]
-# name = "Translations"
-# url = "audio-translation/"
-# weight = 30
+[[main]]
+name = "Translations"
+url = "translation/"
+weight = 30
 
 [[main]]
 name = "Contact us"

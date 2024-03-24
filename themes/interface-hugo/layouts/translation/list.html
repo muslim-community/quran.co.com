@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{ partial "components/page-header" . }}
+  
+  <!-- start quran recitation list -->
+  {{ partial "components/quran_book_ia_list" (dict "Context" . "translation" true "mushaf" false) }}
+  <!-- end quran recitation list -->
+
+{{ end }}

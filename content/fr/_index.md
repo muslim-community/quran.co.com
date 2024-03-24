@@ -1,5 +1,5 @@
 ---
-quranRecitation:
+quranAudio:
   title: "**Récitations**"
   subtitle: "Télécharger le Coran complet en un clic"
 

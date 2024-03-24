@@ -71,3 +71,25 @@
   translation: Listen
 - id: download_single_files
   translation: Download single files
+- id: title
+  translation: Title in translation language
+- id: translation_language
+  translation: Translation language
+- id: translator_english
+  translation: Translator
+- id: title_english
+  translation: Title in english
+- id: translation_language_english
+  translation: Translation language in english
+- id: title_arabic
+  translation: Title in arabic
+- id: translation_language_arabic
+  translation: Translation language in arabic
+- id: translator_arabic
+  translation: Tanslator in arabic
+- id: download
+  translation: Download
+- id: read
+  translation: Read
+- id: source
+  translation: Source

@@ -1,5 +1,5 @@
 ---
-quranRecitation:
+quranAudio:
   title: "**التلاوات**"
   subtitle: "حمل القرآن الكريم كاملا بنقرة واحدة"
 
