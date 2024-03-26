@@ -4,7 +4,7 @@ layout: "translation"
 draft: false
 
 quranBook:
-  #title: "**Quran Recitations**"
+  #title: "**Quran Translations**"
   subtitle: "One click to download the Quran meanings translation book"
 
 ---

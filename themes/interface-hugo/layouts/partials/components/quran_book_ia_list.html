@@ -28,8 +28,8 @@
           rel="stylesheet" />
 
         <script src="https://cdn.datatables.net/v/dt/dt-2.0.0/b-3.0.0/b-colvis-3.0.0/fc-5.0.0/fh-4.0.0/r-3.0.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/datatables.min.js"></script>
-        <div id="quranAudioTableContainer" class="dt-container quranAudioTableContainer">
-          <table id="quranAudioTable" class="display dataTable">
+        <div id="quranBookTableContainer" class="dt-container quranTableContainer">
+          <table id="quranBookTable" class="display dataTable">
             {{ if $translation }}
               <thead>
                 <tr>
@@ -37,6 +37,9 @@
                   <th>{{ i18n "translation_language" }}</th>
                   <th>{{ i18n "translation_language_english" }}</th>
                   <th>{{ i18n "translator_english" }}</th>
+                  <th>{{ i18n "source" }}</th>
+                  <th>{{ i18n "download" }}</th>
+                  <th>{{ i18n "read" }}</th>
                   <th>{{ i18n "title_english" }}</th>
                   {{ if (strings.Contains site.Language.Lang "ar") }}
                     <th>العنوان بالعربيّة</th>
@@ -47,8 +50,6 @@
                     <th>لغة الترجمة</th>
                     <th>المترجم</th>
                   {{ end }}
-                  <th>{{ i18n "download" }}</th>
-                  <th>{{ i18n "read" }}</th>
                 </tr>
               </thead>
               <tbody>
@@ -59,16 +60,19 @@
                       <td>{{ .translation_language }}</td>
                       <td>{{ .en_translation_language }}</td>
                       <td>{{ .en_translator }}</td>
-                      <td>{{ .en_title }}</td>
-                      <td>{{ .ar_title }}</td>
-                      <td>{{ .ar_translation_language }}</td>
-                      <td>{{ .ar_translator }}</td>
+                      <td>
+                        <a
+                          href="{{ .source }}"
+                          title='{{ i18n "source" }}'>
+                          <i class="fa fa-external-link" aria-hidden="true"> </i>
+                        </a>
+                      </td>
                       <td>
                         {{ $ia_pdf_download_url := replace site.Params.ia_pdf_download_url "IA_IDENTIFIER" .ia_id }}
 
                         <a
                           href="{{ $ia_pdf_download_url }}"
-                          title="{{ i18n "download" }}">
+                          title='{{ i18n "download" }}'>
                           <i class="fa fa-download" aria-hidden="true"> </i>
                         </a>
                       </td>
@@ -87,10 +91,14 @@
                         <a
                           href="{{ $read_url }}"
                           target="_blank"
-                          title="{{ i18n "read" }}">
+                          title='{{ i18n "read" }}'>
                           <i class="fa fa-book" aria-hidden="true"> </i>
                         </a>
                       </td>
+                      <td>{{ .en_title }}</td>
+                      <td>{{ .ar_title }}</td>
+                      <td>{{ .ar_translation_language }}</td>
+                      <td>{{ .ar_translator }}</td>
                     </tr>
                   {{ end }}
                 {{ end }}
@@ -100,7 +108,7 @@
 
           <script>
             $(document).ready(function () {
-              $("#quranAudioTable").DataTable({
+              $("#quranBookTable").DataTable({
                 responsive: true,
                 paging: false,
                 scrollY: 500,

@@ -12,7 +12,7 @@ logo_webp = true
 # logo text will only show when logo is missing.
 logo_text = "Quran.co.com"
 # Main Sections
-mainSections = ["blog"]
+mainSections = ["audio-recitation", "translation", "muslim-developer"]
 # image gallery shortcode
 image_gallery = false
 # contact form action
@@ -69,7 +69,7 @@ crisp_website_id = "9aa449e1-9999-422a-938f-8567982eec6d" # replace this code wi
 
 # seo meta data for OpenGraph / Twitter Card
 [metadata]
-keywords = ["quran","القرآن","Coran","Quran","قرآن مجید","কুরআন","Kur'an","قرآن","Quran","قرآن کریم","قۇرئان","Коран","古兰经","islam","الاسلام","Islam","Islam","اسلام","ইসলাম","İslâm","اسلام","እስልምና","اسلام","ئىسلام","ислам","伊斯兰教","audio","صوتي","audio","audio","آڈیو","শ্রুতি","ses","سمعی","ኦዲዮ","آډیو","audio","аудио","声音的","book","كتاب","livre","buku","کتاب","বই","kitap","کتاب","መጽሐፍ","کتاب","كىتاب","книга","书","video","فيديو","vidéo","video","ویڈیو","ভিডিও","video","ویدئو","ቪዲዮ","ویډیو","سىن","видео","视频","download","تحميل","télécharger","unduh","ڈاؤن لوڈ کریں","ডাউনলোড","indirmek","دانلود","አውርድ","ډاونلوډ","چۈشۈرۈش","скачать","下载","free of charge","مجاني","gratuit","gratis","بلا معاوضہ","বিনামূল্যে","ücretsiz","رایگان","ከክፍያ ነጻ","وړيا","ھەقسىز","бесплатно","免费","mp3"]
+keywords = ["quran","القرآن","Coran","Quran","قرآن مجید","কুরআন","Kur'an","قرآن","Quran","قرآن کریم","قۇرئان","Коран","古兰经","islam","الاسلام","Islam","Islam","اسلام","ইসলাম","İslâm","اسلام","እስልምና","اسلام","ئىسلام","ислам","伊斯兰教","audio","صوتي","audio","audio","آڈیو","শ্রুতি","ses","سمعی","ኦዲዮ","آډیو","audio","аудио","声音的","book","كتاب","livre","buku","کتاب","বই","kitap","کتاب","መጽሐፍ","کتاب","كىتاب","книга","书","video","فيديو","vidéo","video","ویڈیو","ভিডিও","video","ویدئو","ቪዲዮ","ویډیو","سىن","видео","视频","download","تحميل","télécharger","unduh","ڈاؤن لوڈ کریں","ডাউনলোড","indirmek","دانلود","አውርድ","ډاونلوډ","چۈشۈرۈش","скачать","下载","free of charge","مجاني","gratuit","gratis","بلا معاوضہ","বিনামূল্যে","ücretsiz","رایگان","ከክፍያ ነጻ","وړيا","ھەقسىز","бесплатно","免费","mp3","Alcorão","Corano","Qur'an","Korán","Alqur'ani","Корану","Koranens","Корана","Kurani","குர்ஆ","Qurani","Къуръан","কুরআনের","Kur'an","ఖురాన్","古兰","Куръон","Куран","Quranê","ഖുർ","Koroang","कुरान","コーラン","ಕುರಾನ್‌","ALKUR'AANI","Qhuraan","QUR'AANAARE","Kurani","translation","meaning","developer","tools","muslim"]
 description = "Free download recitations and translations of the full Quran in mp3 format as well as Quran books  and videos. This is a non-profit website that values and respects the privacy of all of our users."
 author = "Quran.co.com"
 image = "images/logo.png"                # this image will be used as fallback if a page has no image of its own

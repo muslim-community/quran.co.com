@@ -26,7 +26,7 @@
           rel="stylesheet" />
 
         <script src="https://cdn.datatables.net/v/dt/dt-2.0.0/b-3.0.0/b-colvis-3.0.0/fc-5.0.0/fh-4.0.0/r-3.0.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/datatables.min.js"></script>
-        <div id="quranAudioTableContainer" class="dt-container quranAudioTableContainer">
+        <div id="quranAudioTableContainer" class="dt-container quranTableContainer">
           <table id="quranAudioTable" class="display dataTable">
             <thead>
               <tr>
@@ -74,7 +74,7 @@
 
                       <a
                         href="{{ $ia_mp3_download_url }}"
-                        title="{{ i18n "download_full_quran" }}">
+                        title='{{ i18n "download_full_quran" }}'>
                         <i class="fa fa-download" aria-hidden="true"> </i>
                       </a>
                     </td>
@@ -84,7 +84,7 @@
                       <a
                         href="{{ $ia_download_url }}"
                         target="_blank"
-                        title="{{ i18n "download_single_files" }}">
+                        title='{{ i18n "download_single_files" }}'>
                         <i class="fa fa-external-link" aria-hidden="true"> </i>
                       </a>
                     </td>
@@ -113,7 +113,7 @@
                       <a
                         href="{{ $listen_url }}"
                         target="_blank"
-                        title="{{ i18n "listen" }}">
+                        title='{{ i18n "listen" }}'>
                         <i class="fa fa-headphones" aria-hidden="true"> </i>
                       </a>
                     </td>

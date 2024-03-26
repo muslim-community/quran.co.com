@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <!-- checking blog -->
+  {{ partial "components/page-header.html" . }}
+  <section class="section-sm has-backdrop pt-0">
+    <div class="container">
+      <div class="row gy-4 justify-content-center has-colored-text">
+        {{ $paginator := .Paginate (.Data.Pages) }}
+        {{ range $i, $e := $paginator.Pages }}
+          <div class="col-lg-5 col-md-6">
+            {{ .Render "article" }}
+          </div>
+        {{ end }}
+        <div class="col-12">
+          {{ partial "components/custom-pagination.html" . }}
+        </div>
+      </div>
+    </div>
+
+    <svg
+      class="backdrop text-primary translate-middle-y"
+      width="490"
+      height="670"
+      viewBox="0 0 490 670"
+      style="left: 0px;top: 50%;"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        opacity="0.3"
+        d="M427.667 1.51615e-05C612.866 7.06621e-06 763 149.985 763 335C763 520.015 612.866 670 427.667 670C343.258 670 246.953 638.844 167.13 587.416C71.8151 526.006 -1.0242e-05 435.691 -1.46433e-05 335C-1.89705e-05 236.006 167.749 261.462 260.667 200.134C341.407 146.844 341.56 1.89254e-05 427.667 1.51615e-05Z"
+        fill="currentColor" />
+    </svg>
+  </section>
+{{ end }}
