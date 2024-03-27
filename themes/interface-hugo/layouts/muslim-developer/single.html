@@ -190,24 +190,26 @@
     <section class="section has-backdrop pt-5">
       <div class="container">
         <div class="row justify-content-center gy-4 has-colored-text">
-          <div class="col-lg-10 mx-auto mb-2">
-            <div
-              class="d-flex justify-content-between flex-wrap align-items-center">
-              <h2 class="section-title h3 mb-0 pb-0">
-                {{ i18n `related_posts` }}
-              </h2>
-              <a href="{{ site.BaseURL }}muslim-developer" class="btn btn-text-primary"
-                >Browse All Articles</a
-              >
-            </div>
-          </div>
-
           {{ $page := . }}
           {{ $relatedOpts := dict
             "indices" (slice "categories")
             "document" $page
           }}
           {{ $related := .Site.RegularPages.Related $relatedOpts }}
+          <div class="col-lg-10 mx-auto mb-2">
+            <div
+              class="d-flex justify-content-between flex-wrap align-items-center">
+              {{ with $related}}
+                <h2 class="section-title h3 mb-0 pb-0">
+                  {{ i18n `related_posts` }}
+                </h2>
+              {{ end }}
+              <a href="{{ site.BaseURL }}muslim-developer" class="btn btn-text-primary"
+                >Browse All Articles</a
+              >
+            </div>
+          </div>
+          
           {{ range first 2 $related }}
             <div class="col-lg-5">
               {{ .Render "article" }}

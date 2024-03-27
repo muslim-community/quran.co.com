@@ -1,5 +1,5 @@
 ---
-title: "OFFICIAL Adobe Illustrator copy of the Holy Quran for Printing Works of Mus’haf al-Madinah from Saudi Arabia"
+title: "OFFICIAL Adobe Illustrator copy of the of the Glorious Quran for Printing Works of Mus’haf Al-Madinah from Saudi Arabia"
 slug: "official-digital copy-of-holy-quran-adobe-illustrator-format-for-multiple-recitations-from-madinah-saudi-arabia"
 image: "images/muslim-developer/qurancomplex.jpg"
 author: "Abd Arrahmene"

@@ -1,5 +1,5 @@
 ---
-title: "OFFICIAL Qur’anic text of Mus’haf al-Madinah from Saudi Arabia"
+title: "OFFICIAL text of the Glorious Quran of Mus’haf Al-Madinah from Saudi Arabia"
 slug: "official-text-of-holy-quran-for-multiple-recitations-from-madinah-saudi-arabia"
 image: "images/muslim-developer/qurancomplex.jpg"
 author: "Abd Arrahmene"
