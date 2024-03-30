@@ -4,7 +4,7 @@ slug: "official-verse-by-verse-audio -of-glorious-quran-for-multiple-recitations
 image: "images/muslim-developer/qurancomplex.jpg"
 author: "Abd Arrahmene"
 categories: ["quran audio"]
-keywords: ["quran verse by verse", "quran mp3 for developer", "quran audio for developer", "developer", "saudi", "official", "quran", "audio", "sound", "mp3", "developer", "muslim", "islam"]
+keywords: ["quran verse by verse", "quran mp3 for developer", "quran audio for developer", "developer", "saudi", "official", "verse by verse", "verse", "quran verse", "quran", "audio", "sound", "mp3", "developer", "muslim", "islam"]
 draft: false
 ---
 
