@@ -1,5 +1,7 @@
 - id: home
   translation: الصفحة الرئيسية
+- id: header_message
+  translation: "موقعنا للقرآن فقط و بدون إعلانات ❤️ نحن لا نجمع و لا نبيع ببياناتكم الشخصية"  
 - id: send
   translation: أرسلها
 - id: email

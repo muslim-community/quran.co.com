@@ -25,6 +25,9 @@ custom_script = ""
 # copyright
 theme_copyright = false
 
+# Header Message
+header_message = true
+
 # internet archive
 ia_mp3_download_url = "https://archive.org/compress/IA_IDENTIFIER/formats=VBR%20MP3&file=/IA_IDENTIFIER.zip"
 ia_download_url = "https://archive.org/download/IA_IDENTIFIER"

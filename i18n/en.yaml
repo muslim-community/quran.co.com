@@ -1,6 +1,9 @@
 - id: home
   translation: Home
 
+- id: header_message
+  translation: "Only Quran and No Ads ❤️ We do not collect or sell your personal information"
+
 - id: send
   translation: send message
 

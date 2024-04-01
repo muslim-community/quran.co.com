@@ -1,7 +1,7 @@
 ---
 # global page parameters
 pageTitle: "**Quran recitations and translations from your favorite reciters in MP3 format**"
-pageDescription: "Only Quran, No Ads - We do not collect, use, or sell any of your personal information."
+# pageDescription: "Only Quran, No Ads - We do not collect, use, or sell any of your personal information."
 
 quranAudio:
   title: "**Quran Recitations**"

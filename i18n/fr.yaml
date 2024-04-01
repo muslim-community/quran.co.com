@@ -1,5 +1,7 @@
 - id: home
   translation: Accueil
+- id: header_message
+  translation: "Uniquement du Coran et Pas de publicité ❤️ Nous ne collectons ni ne vendons vos informations personnelles"
 - id: send
   translation: Envoyez
 - id: email
