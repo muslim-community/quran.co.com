@@ -17,9 +17,14 @@ url = "translation/"
 weight = 30
 
 [[main]]
+name = "Développeurs"
+url = "muslim-developer/"
+weight = 40
+
+[[main]]
 name = "Nous contacter"
 url = "contact/"
-weight = 40
+weight = 60
 
 [[footer]]
 name = "Qui sommes-nous"

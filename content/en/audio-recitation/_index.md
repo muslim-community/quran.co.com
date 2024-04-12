@@ -1,7 +1,6 @@
 ---
 title: "Quran Recitations"
 layout: "audio-recitation"
-#slug: "free-download-full-quran-mp3"
 draft: false
 
 quranAudio:

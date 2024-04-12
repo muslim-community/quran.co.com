@@ -3,7 +3,7 @@ title: "التلاوات"
 layout: "audio-recitation"
 draft: false
 
-quranRecitation:
+quranAudio:
   #title: "**التلاوات**"
   subtitle: "حمل القرآن الكريم كاملا بنقرة واحدة"
 
